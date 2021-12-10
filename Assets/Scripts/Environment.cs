@@ -1,19 +1,28 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using unityRandomGenerator = UnityEngine.Random;
+using dotNetRandomGenerator = System.Random;
 
 public class Environment : MonoBehaviour
 {
     public static Environment instance;
     public bool isGameOver;
+    public int playerScore;
+    public float playTime;
 
+    private dotNetRandomGenerator dotNetRandomGenerator;
     private void Awake()
     {
         instance = this;
+        unityRandomGenerator.InitState(DateTime.Today.Millisecond);
+        dotNetRandomGenerator = new dotNetRandomGenerator(DateTime.Today.Second);
     }
     private void Start()
     {
         isGameOver = false;
+        playerScore = 0;
     }
 
     public void PauseWorld()
@@ -29,5 +38,20 @@ public class Environment : MonoBehaviour
     public void StopWorld()
     {
         isGameOver = true;
+    }
+
+    public void AddScore(int score)
+    {
+        playerScore += score;
+    }
+
+
+    public float RandomFloat(float minValue, float maxValue)
+    {
+        return unityRandomGenerator.Range(minValue,maxValue);
+    }
+    public int RandomInt(int minValue, int maxValue)
+    {
+        return dotNetRandomGenerator.Next(minValue,maxValue);
     }
 }

@@ -52,6 +52,7 @@ public class CharacterControllingScript : MonoBehaviour
     {
         if (!Environment.instance.isGameOver)
         {
+            Environment.instance.playTime += Time.deltaTime;
             isRun = Input.GetKey(KeyCode.LeftArrow)||Input.GetKey(KeyCode.RightArrow);
             isLeftDirection = this.transform.rotation.y < ROTATION_0;
             isGround = CheckIsGround();
