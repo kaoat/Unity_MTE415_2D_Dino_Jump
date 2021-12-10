@@ -53,12 +53,15 @@
     <UnityVersion>2020.3.20f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Bolt 2D DinoRun VE1\ReadMe\Scripts\ReadmeVE1.cs" />
-    <Compile Include="Assets\Scripts\BackgroundMovingScript.cs" />
     <Compile Include="Assets\Scripts\Environment.cs" />
-    <Compile Include="Assets\Scripts\CharacterControllingScript.cs" />
-    <Compile Include="Assets\Extensions\Vector2Extension.cs" />
     <Compile Include="Assets\Extensions\FloatExtension.cs" />
+    <Compile Include="Assets\Scripts\SpawnPointScript.cs" />
+    <Compile Include="Assets\Scripts\BackgroundMovingScript.cs" />
+    <Compile Include="Assets\Extensions\Vector2Extension.cs" />
+    <Compile Include="Assets\Scripts\CactusScript.cs" />
+    <Compile Include="Assets\Scripts\CharacterControllingScript.cs" />
+    <Compile Include="Assets\Bolt 2D DinoRun VE1\ReadMe\Scripts\ReadmeVE1.cs" />
+    <Compile Include="Assets\Scripts\FruitScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

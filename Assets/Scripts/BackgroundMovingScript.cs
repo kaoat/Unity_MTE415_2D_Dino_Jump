@@ -26,14 +26,17 @@ public class BackgroundMovingScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        newPosition.x -= MOVING_SPEED * Time.deltaTime;
-        isEnd = newPosition.x < X_ENDING_POINT;
-
-        if (isEnd)
+        if (!Environment.instance.isGameOver)
         {
-            newPosition.x = X_STARTING_POINT;
-        }
+            newPosition.x -= MOVING_SPEED * Time.deltaTime;
+            isEnd = newPosition.x < X_ENDING_POINT;
 
-        this.transform.position = newPosition;
+            if (isEnd)
+            {
+                newPosition.x = X_STARTING_POINT;
+            }
+
+            this.transform.position = newPosition;
+        }
     }
 }
