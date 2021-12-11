@@ -12,6 +12,7 @@ public class FruitScript : MonoBehaviour
         if (collision.gameObject.CompareTag(playerTagName))
         {
             Environment.instance.AddScore(score);
+            Environment.instance.playerAudioScript.AudioPickItem();
             Destroy(this.gameObject);
         }
     }

@@ -11,6 +11,12 @@ public class Environment : MonoBehaviour
     public bool isGameOver;
     public int playerScore;
     public float playTime;
+    public bool isPause;
+    public AudioSource playerAudioSource;
+    public AudioSource SystemAudioSource;
+    public GameObject playerObject;
+
+    public PlayerAudioScript playerAudioScript;
 
     private dotNetRandomGenerator dotNetRandomGenerator;
     private void Awake()
@@ -18,11 +24,13 @@ public class Environment : MonoBehaviour
         instance = this;
         unityRandomGenerator.InitState(DateTime.Today.Millisecond);
         dotNetRandomGenerator = new dotNetRandomGenerator(DateTime.Today.Second);
+        playerAudioScript = playerObject.GetComponentInChildren<PlayerAudioScript>();
     }
     private void Start()
     {
         isGameOver = false;
         playerScore = 0;
+        isPause = false;
     }
 
     public void PauseWorld()

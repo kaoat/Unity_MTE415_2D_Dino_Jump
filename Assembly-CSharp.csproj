@@ -58,12 +58,15 @@
     <Compile Include="Assets\Extensions\FloatExtension.cs" />
     <Compile Include="Assets\Scripts\SpawnEnemyScript.cs" />
     <Compile Include="Assets\Scripts\BackgroundMovingScript.cs" />
+    <Compile Include="Assets\Scripts\SpawnFruitScript.cs" />
+    <Compile Include="Assets\Scripts\UserInterfaceScript.cs" />
     <Compile Include="Assets\Extensions\Vector2Extension.cs" />
     <Compile Include="Assets\Scripts\CactusScript.cs" />
     <Compile Include="Assets\Scripts\CharacterControllingScript.cs" />
     <Compile Include="Assets\Bolt 2D DinoRun VE1\ReadMe\Scripts\ReadmeVE1.cs" />
-    <Compile Include="Assets\Scripts\SpawnFruitScript.cs" />
-    <Compile Include="Assets\Scripts\UserInterfaceScript.cs" />
+    <Compile Include="Assets\Scripts\PlayerAudioScript.cs" />
+    <Compile Include="Assets\Scripts\BorderMenuScript.cs" />
+    <Compile Include="Assets\Scripts\MainMenuScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

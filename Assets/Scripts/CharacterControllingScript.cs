@@ -105,6 +105,7 @@ public class CharacterControllingScript : MonoBehaviour
 
     void Jump()
     {
+        Environment.instance.playerAudioScript.AudioJump();
         playerRig.AddForce(new Vector2(0, JUMP_POWER));
     }
 
