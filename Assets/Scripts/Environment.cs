@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using unityRandomGenerator = UnityEngine.Random;
 using dotNetRandomGenerator = System.Random;
+using UnityEngine.SceneManagement;
 
 public class Environment : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class Environment : MonoBehaviour
     public AudioSource playerAudioSource;
     public AudioSource SystemAudioSource;
     public GameObject playerObject;
+    public string mainMenuSceneName;
+    public string currentSceneName;
 
     public PlayerAudioScript playerAudioScript;
 
@@ -61,5 +64,16 @@ public class Environment : MonoBehaviour
     public int RandomInt(int minValue, int maxValue)
     {
         return dotNetRandomGenerator.Next(minValue,maxValue);
+    }
+
+    public void GoToMainMenu()
+    {
+        ResumeWorld();
+        SceneManager.LoadScene(mainMenuSceneName);
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 }

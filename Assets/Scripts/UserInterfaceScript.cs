@@ -66,11 +66,6 @@ public class UserInterfaceScript : MonoBehaviour
         panelObject.SetActive(false);
     }
 
-    public void ExitGame()
-    {
-        Application.Quit();
-    }
-
     public void HideMainPanel()
     {
         mainPanel.SetActive(false);

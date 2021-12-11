@@ -360,8 +360,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1741382963}
-          m_TargetAssemblyTypeName: UserInterfaceScript, Assembly-CSharp
+        - m_Target: {fileID: 2054813352}
+          m_TargetAssemblyTypeName: Environment, Assembly-CSharp
           m_MethodName: ExitGame
           m_Mode: 1
           m_Arguments:
@@ -559,7 +559,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.276
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1036,7 +1036,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d857e228d24528b43921c6ead88f667d, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.193
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1640,7 +1640,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -1670,7 +1670,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 775576699}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2054813352}
+        m_TargetAssemblyTypeName: Environment, Assembly-CSharp
+        m_MethodName: GoToMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &775576699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4811,6 +4823,8 @@ MonoBehaviour:
   playerAudioSource: {fileID: 344542903}
   SystemAudioSource: {fileID: 488396112}
   playerObject: {fileID: 425925386}
+  mainMenuSceneName: MainMenu
+  currentSceneName: Game
   playerAudioScript: {fileID: 0}
 --- !u!4 &2054813353
 Transform:

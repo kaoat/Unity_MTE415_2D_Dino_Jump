@@ -13,11 +13,15 @@ public class SpawnFruitScript : MonoBehaviour
 
     private float accumulatedTime;
     private Vector2 spawnPosition;
+
+    private void Awake()
+    {
+        spawnPosition = new Vector2();
+    }
     // Start is called before the first frame update
     void Start()
     {
         accumulatedTime = 0;
-        spawnPosition = new Vector2();
     }
 
     // Update is called once per frame

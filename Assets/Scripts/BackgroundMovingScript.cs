@@ -14,13 +14,13 @@ public class BackgroundMovingScript : MonoBehaviour
     private void Awake()
     {
         newPosition = this.transform.position;
-        isEnd = true;
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        newPosition.x = X_STARTING_POINT;
+        isEnd = false;
     }
 
     // Update is called once per frame

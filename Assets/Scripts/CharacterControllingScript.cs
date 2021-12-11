@@ -37,6 +37,8 @@ public class CharacterControllingScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        newRotation.y = ROTATION_0;
+
         isDied = false;
         isRun = false;
         isLeftDirection = false;
