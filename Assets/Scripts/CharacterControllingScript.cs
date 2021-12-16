@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharacterControllingScript : MonoBehaviour
 {
@@ -90,6 +91,16 @@ public class CharacterControllingScript : MonoBehaviour
             isDied = true;
             animator.SetBool(IS_DIED_PARAM_ANIMATOR, isDied);
             Environment.instance.StopWorld();
+            StartCoroutine(LoadCurrentSceneAsync());
+        }
+    }
+
+    IEnumerator LoadCurrentSceneAsync()
+    {
+        AsyncOperation loadSceneAsync = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
+        while (!loadSceneAsync.isDone)
+        {
+            yield return null;
         }
     }
 
